@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<h1 class="page-title">{{title}}</h1>
+
+<div class="stage">
+
+  <div class="user-info">
+    <span class="username-text">{{username}}</span>
+    <span class="logout-text"><a href="/logout">Logout</a></span>
+  </div>
+
+  <aside class="picker">
+    <form method="POST" action="/gallery">
+      <div class="list">
+        {{#each images}}
+          <label class="item">
+            <input type="radio" name="image" value="{{file}}">
+            <span class="text">{{label}}</span>
+          </label>
+        {{/each}}
+      </div>
+
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </aside>
+
+  <main class="viewer">
+    <div class="frame">
+      <img class="photo" src="/images/{{selectedImage}}" alt="">
+    </div>
+    <div class="caption">{{caption}}</div>
+  </main>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Account Registration</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+
+    <h1 class="page-title">Turkey at a Glance</h1>
+
+    <div class="login-box">
+      <h2>Account Registration</h2>
+
+      <form method="POST" action="/register">
+        <input type="email" name="email" placeholder="Email" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <input
+          type="password"
+          name="confirmPassword"
+          placeholder="Confirm Password"
+          required
+        />
+
+        <button class="register-btn" type="submit">Register</button>
+      </form>
+
+      <form method="GET" action="/login">
+        <button class="back-btn" type="submit">Back to Login</button>
+      </form>
+
+      {{#if error}}
+        <label class="error">{{error}}</label>
+      {{/if}}
+    </div>
+
+  </body>
+</html>

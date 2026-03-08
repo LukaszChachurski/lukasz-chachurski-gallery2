@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+
+    <h1 class="page-title">Turkey at a Glance</h1>
+
+    <div class="login-box">
+      <h2>Login</h2>
+
+      <form method="POST" action="/login">
+        <input type="text" name="username" placeholder="Username" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+
+        <button class="login-btn" type="submit">Submit</button>
+      </form>
+
+      <form method="GET" action="/register">
+        <button class="register-btn" type="submit">Register</button>
+      </form>
+
+      {{#if error}}
+        <label class="error">{{error}}</label>
+      {{/if}}
+
+      {{#if success}}
+        <label class="success">{{success}}</label>
+      {{/if}}
+    </div>
+
+  </body>
+</html>
