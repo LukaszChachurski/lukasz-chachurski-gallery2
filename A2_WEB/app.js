@@ -223,6 +223,4 @@ app.post("/gallery", async (req, res) => {
 });
 
 // here for my start server
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
-});
+module.exports = app;
